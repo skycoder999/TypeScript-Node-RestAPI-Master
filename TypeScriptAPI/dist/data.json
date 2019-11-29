@@ -1,0 +1,163 @@
+[
+  {
+    "customerID": 1,
+    "customerName": "Customer1",
+    "catergory": "HealthCare",
+    "email": "Customer1@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 2,
+    "customerName": "Customer2",
+    "catergory": "HealthCare",
+    "email": "Customer2@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 3,
+    "customerName": "Customer3",
+    "catergory": "HealthCare",
+    "email": "Customer3@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 4,
+    "customerName": "Customer4",
+    "catergory": "HealthCare",
+    "email": "Customer4@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 5,
+    "customerName": "Customer5",
+    "catergory": "HealthCare",
+    "email": "Customer5@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 6,
+    "customerName": "Customer6",
+    "catergory": "HealthCare",
+    "email": "Customer6@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 7,
+    "customerName": "Customer7",
+    "catergory": "HealthCare",
+    "email": "Customer7@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 8,
+    "customerName": "Customer8",
+    "catergory": "HealthCare",
+    "email": "Customer8@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 9,
+    "customerName": "Customer9",
+    "catergory": "HealthCare",
+    "email": "Customer9@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 10,
+    "customerName": "Customer10",
+    "catergory": "HealthCare",
+    "email": "Customer10@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 11,
+    "customerName": "Customer11",
+    "catergory": "HealthCare",
+    "email": "Customer11@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 12,
+    "customerName": "Customer12",
+    "catergory": "HealthCare",
+    "email": "Customer12@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 13,
+    "customerName": "Customer13",
+    "catergory": "HealthCare",
+    "email": "Customer13@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 14,
+    "customerName": "Customer14",
+    "catergory": "HealthCare",
+    "email": "Customer14@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 15,
+    "customerName": "Customer15",
+    "catergory": "HealthCare",
+    "email": "Customer15@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 16,
+    "customerName": "Customer16",
+    "catergory": "HealthCare",
+    "email": "Customer16@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 17,
+    "customerName": "Customer17",
+    "catergory": "HealthCare",
+    "email": "Customer17@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 18,
+    "customerName": "Customer18",
+    "catergory": "HealthCare",
+    "email": "Customer18@test.com",
+    "isActive": true
+  },
+  {
+    "customerID": 19,
+    "customerName": "Customer19",
+    "catergory": "HealthCare",
+    "email": "Customer19@test.com",
+    "isActive": false
+  },
+  {
+    "customerID": 20,
+    "customerName": "Customer20",
+    "catergory": "HealthCare",
+    "email": "Customer20@test.com",
+    "isActive": false
+  },
+  {
+    "customerID": 21,
+    "customerName": "Customer21",
+    "catergory": "HealthCare",
+    "email": "Customer21@test.com",
+    "isActive": false
+  },
+  {
+    "customerID": 22,
+    "customerName": "Customer22",
+    "catergory": "HealthCare",
+    "email": "Customer22@test.com",
+    "isActive": false
+  },
+  {
+    "customerID": 23,
+    "customerName": "Customer23",
+    "catergory": "HealthCare",
+    "email": "Customer23@test.com",
+    "isActive": false
+  }
+]

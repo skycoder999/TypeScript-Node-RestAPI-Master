@@ -1,0 +1,198 @@
+﻿@model KendoUIMVCAPI.Models.Customer
+@using Kendo.Mvc.UI;
+@{
+    ViewBag.Title = "Customers Dashoard";
+}
+
+<link rel="stylesheet" href="~/Content/customerStyle.css" type="text/css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.min.js"></script>
+<h3>Customers List in Kendo UI Grid</h3>
+<div class="container">
+    @*Grid Representation*@
+    <div class="row">
+        @(Html.Kendo().Grid<KendoUIMVCAPI.Models.Customer>()
+                                                        .Name("CusGrid")
+
+                                                         .ToolBar(tools => tools.Excel())
+                                                          .Excel(excel => excel
+                                                            .FileName("CustomerList.xlsx")
+                                                            .Filterable(true)
+                                                        )
+                                                        .ToolBar(tools => tools.Pdf())
+                                                    .Pdf(pdf => pdf
+                                                        .AllPages()
+                                                        .AvoidLinks()
+                                                        .PaperSize("A4")
+                                                        .Scale(0.8)
+                                                        .Margin("2cm", "1cm", "1cm", "1cm")
+                                                        .Landscape()
+                                                        .RepeatHeaders()
+                                                        .TemplateId("page-template")
+                                                        .FileName("CustomerList.pdf")
+                                                    )
+                                                        .Reorderable(r => r.Columns(true))
+                                                        .Resizable(r => r.Columns(true))
+                                                        .ColumnMenu()
+                                                       .Groupable()
+                                                        .DataSource(dataSource => dataSource
+                                                            .Ajax()
+                                                            .PageSize(5)
+                                                            .Read(read => read.Action("CustomerList", "Customer"))
+                                                            )
+                                            // Set grid sortable.
+                                            .Sortable()
+                                            // Set grid selectable.
+                                            .Selectable()
+                                            .Filterable()
+                                            // Set grid pagable.
+                                            .Pageable(pageable =>
+                                            {
+                                                pageable.Refresh(true);
+                                                pageable.PageSizes(true);
+                                                pageable.ButtonCount(2);
+                                            })
+
+        )
+    </div>
+    <div id="idProdGrid" class="row" style="padding-top:50px">
+        <h3>Products List in Kendo UI Grid</h3>
+        @(Html.Kendo().Grid<KendoUIMVCAPI.Models.Product>()
+                                                                .Name("ProdGrid")
+
+                                                                 .ToolBar(tools => tools.Excel())
+                                                                  .Excel(excel => excel
+                                                                    .FileName("ProductList.xlsx")
+                                                                    .Filterable(true)
+                                                                )
+                                                                .ToolBar(tools => tools.Pdf())
+                                                            .Pdf(pdf => pdf
+                                                                .AllPages()
+                                                                .AvoidLinks()
+                                                                .PaperSize("A4")
+                                                                .Scale(0.8)
+                                                                .Margin("2cm", "1cm", "1cm", "1cm")
+                                                                .Landscape()
+                                                                .RepeatHeaders()
+                                                                .TemplateId("page-template")
+                                                                .FileName("ProductList.pdf")
+                                                            )
+                                                                .Reorderable(r => r.Columns(true))
+                                                                .Resizable(r => r.Columns(true))
+                                                                .ColumnMenu()
+                                                               .Groupable()
+                                                                .DataSource(dataSource => dataSource
+                                                                    .Ajax()
+                                                                    .PageSize(5)
+                                                                    .Read(read => read.Action("ProductList", "Customer"))
+                                                                    )
+                                                    // Set grid sortable.
+                                                    .Sortable()
+                                                    // Set grid selectable.
+                                                    .Selectable()
+                                                    .Filterable()
+                                                    // Set grid pagable.
+                                                    .Pageable(pageable =>
+                                                    {
+                                                        pageable.Refresh(true);
+                                                        pageable.PageSizes(true);
+                                                        pageable.ButtonCount(2);
+                                                    })
+
+        )
+    </div>
+    <h3>Products List in Kendo UI Widgets</h3>
+    <div id="idGauges" class="row">
+        @*LinearGauge Representation*@
+        <div id="lnrGauge">
+            <h5>Active/InActive Customers Count in Kendo UI-LinearGauge</h5>
+            @(Html.Kendo().LinearGauge()
+                                                            .Name("linearGauge") //The name of the LinearGauge is mandatory. It specifies the "id" attribute of the widget.
+
+                                                            .Scale(scale => scale
+                                                                .Min(0) //Set the min value of the LinearGauge.
+                                                                .Max(50) //Set the min value of the LinearGauge.
+                                                            )
+                                                            .Scale(scale => scale
+                                                            .Ranges(ranges =>
+                                                            {
+                                                                ranges.Add().From(0).To(18).Color("#ffc101");    // active
+                                                            ranges.Add().From(18).To(23).Color("#a5a5a5");  // inactive
+                                                        })
+                                                            )
+
+            )
+        </div>
+        @*RadialGauge Representation*@
+        <div id="rdlGauge">
+            <h5>Active/InActive Customers Count in Kendo UI-RadialGauge</h5>
+            @(Html.Kendo().RadialGauge()
+                                                                .Name("radialGauge") //The name of the RadialGauge is mandatory. It specifies the "id" attribute of the widget.
+
+                                                                .Scale(scale => scale
+                                                                    .Min(0) // Set the min value of the RadialGauge.
+                                                                    .Max(50) // Set the min value of the RadialGauge.
+                                                                )
+                                                                .Pointer(pointer => pointer
+                                                                    .Value(23) //Set the value of the RadialGauge.  //total
+                                                                )
+                                                                .Scale(scale => scale
+                                                                .Ranges(ranges =>
+                                                                {
+                                                                    ranges.Add().From(0).To(18).Color("#ffc101");     //active
+                                                                ranges.Add().From(18).To(23).Color("#a5a5a5");  //inactive
+                                                            })
+                                                                )
+
+            )
+        </div>
+        @*Chart Representation*@
+        <div id="idChart">
+            <h5>Active/InActive Customers Count in Kendo UI-Pie Chart</h5>
+            @(Html.Kendo().Chart()
+                                                                .Name("Chart")
+                                                                .Title(t => t
+                                                                            .Position(ChartTitlePosition.Bottom))
+                                                                .Legend(legend => legend
+                                                                    .Visible(false)
+                                                                )
+                                                                .ChartArea(chart => chart
+                                                                    .Background("transparent")
+                                                                    )
+                                                                .Series(series =>
+                                                                {
+                                                                    series.Pie(new dynamic[] {
+                            new {category="Active",value=18,color="#ffc101"},
+                            new {category="InActive",value=5,color="Grey"}
+                                                                    })
+                                                                    .Labels(labels => labels
+                                                                        .Template("#= category # \n #= value#")
+                                                                        .Background("transparent")
+                                                                        .Visible(true)
+                                                                    )
+                                                                    .StartAngle(150);
+                                                                })
+                                                                .Tooltip(tooltip => tooltip
+                                                                    .Visible(false)
+                                                                    .Format("{0}")
+                                                                )
+            )
+        </div>
+        <div id="divColors">
+            <table>
+                <tr>
+                    <td id="tdColorsYlw">&nbsp</td>
+                    <td>&nbsp</td>
+                    <td>Active Customers</td>
+                </tr>
+                <tr>
+                    <td id="tdColorsGrey">&nbsp</td>
+                    <td>&nbsp</td>
+                    <td>Inactive Customers</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,101 @@
+﻿
+body {
+    background-color: #f2f8fd;
+}
+
+.k-grid .k-state-selected {
+    background-color: #64a7f9 !important;
+    color: #fffbfb;
+    border-color: #efefef;
+}
+
+.k-grid .k-alt .k-state-selected {
+    background-color: cornflowerblue !important;
+    color: #000000;
+}
+
+#CusGrid tbody tr:hover {
+    background: #f2f8fe;
+}
+
+#CusGrid, #ProdGrid .k-autocomplete, .k-draghandle, .k-dropdown-wrap, .k-grouping-header, .k-header, .k-numeric-wrap, .k-pager-wrap, .k-panelbar .k-tabstrip-items .k-item, .k-picker-wrap, .k-progressbar, .k-state-highlight, .k-tabstrip-items .k-item, .k-textbox {
+    background-color: #ffffff !important;
+}
+
+    #CusGrid .k-header .k-grid-toolbar .k-grid-top {
+        padding: 20px !important;
+    }
+
+.k-select {
+    height: 25px;
+    width: 30px
+}
+
+.k-grid-header {
+    background-color: darkslateblue !important;
+    color: #fff !important;
+}
+
+.k-button {
+    background-color: #207044;
+    color: #fff;
+    padding: 5px;
+}
+
+.k-grid-pdf {
+    background-color: #e14646 !important;
+    padding: 5px;
+}
+
+h3, h5 {
+    font-weight: bold;
+    color: #074f9f;
+}
+
+#idProdGrid {
+    margin-bottom: 30px;
+}
+
+#idGauges {
+    background-color: #ffffff;
+}
+
+#lnrGauge {
+    float: left;
+    padding-top: 50px;
+    padding-right: 250px;
+    padding-left: 75px
+}
+
+#rdlGauge {
+    float: left;
+    padding-top: 50px;
+}
+
+#idChart {
+    float: left;
+    padding-top: 50px;
+    padding-left: 75px;
+}
+
+#divColors {
+    float: left;
+    padding-top: 230px;
+    padding-left: 200px
+}
+
+#tdColorsYlw {
+    display: block;
+    width: 20px;
+    background-color: #ffc101
+}
+
+#tdColorsGrey {
+    display: block;
+    width: 20px;
+    background-color: #a5a5a5
+}
+
+.k-icon, .k-tool-icon {
+color:blue;
+}
